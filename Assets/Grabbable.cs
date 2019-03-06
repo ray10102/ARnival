@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using MagicLeap;
 using UnityEngine;
@@ -6,34 +7,39 @@ using UnityEngine.XR.MagicLeap;
 
 public class Grabbable : MonoBehaviour
 {
+	public Action OnGrabbableReleased;
+	public Action OnGrabbableGrabbed;
+	
 	private static ControllerVisualizer controllerVisualizer;
 
-	private bool isBeingGrabbed;
+	public bool isBeingGrabbed;
 	private bool canBeGrabbed;
 
 	private Transform originalParent;
 	private Vector3 originalLocalPos;
 
+	[SerializeField]
+	private MLInputControllerButton grabButton = MLInputControllerButton.Bumper;
+	[SerializeField]
+	private bool useTrigger;
+
 	void Awake()
 	{
-		MLInput.OnTriggerDown += OnGrab;
-		MLInput.OnTriggerUp += OnRelease;
-		
+		if (useTrigger)
+		{
+			MLInput.OnTriggerDown += OnTriggerDown;
+			MLInput.OnTriggerUp += OnTriggerUp;
+		}
+		else
+		{
+			MLInput.OnControllerButtonDown += OnButtonDown;
+		}
+
 		// cache original state values
 		originalLocalPos = transform.localPosition;
 		originalParent = transform.parent;
 	}
 	
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-
 	void OnTriggerEnter(Collider col)
 	{
 		ControllerVisualizer controller = col.GetComponent<ControllerVisualizer>();
@@ -58,15 +64,30 @@ public class Grabbable : MonoBehaviour
 		}
 	}
 
-	void OnGrab(byte controller_id, float value)
+	void OnButtonDown(byte controller_id, MLInputControllerButton button)
+	{
+		if (button == grabButton)
+		{
+			if (canBeGrabbed && !isBeingGrabbed)
+			{
+				Grab();
+			}
+			else if (isBeingGrabbed)
+			{
+				Release();
+			}
+		}
+	}
+
+	void OnTriggerDown(byte controller_id, float value)
 	{
 		if (canBeGrabbed && !isBeingGrabbed)
 		{
 			Grab();
 		}
 	}
-
-	void OnRelease(byte controller_id, float value)
+	
+	void OnTriggerUp(byte controller_id, float value)
 	{
 		if (isBeingGrabbed)
 		{
@@ -82,11 +103,13 @@ public class Grabbable : MonoBehaviour
 		}
 		
 		transform.parent = controllerVisualizer.transform;
+		OnGrabbableGrabbed.Invoke();
 	}
 	
 	private void Release()
 	{
 		transform.parent = originalParent;
+		OnGrabbableReleased.Invoke();
 	}
 
 	public void Reset()

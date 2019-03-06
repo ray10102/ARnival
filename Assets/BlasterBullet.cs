@@ -34,6 +34,7 @@ public class BlasterBullet : MonoBehaviour
 
 		if (col.GetComponent<BlasterTarget>())
 		{
+			Debug.Log("Hit target");
 			// TODO Handle target hit
 		}
 	}
