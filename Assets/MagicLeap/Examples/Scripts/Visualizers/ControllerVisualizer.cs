@@ -250,7 +250,7 @@ namespace MagicLeap
         /// Set object visibility to value.
         /// </summary>
         /// <param name="value"> true or false to set visibility. </param>
-        private void SetVisibility(bool value)
+        public void SetVisibility(bool value)
         {
             if (_wasControllerValid == value)
             {
