@@ -1,0 +1,23 @@
+{
+  "id": "130914aa-d017-43da-99ee-298b77b935b6",
+  "processor": "lap/types/processor/texture_from_png",
+  "input": {
+    "image": [
+      {
+        "path": "icon/Model/mallet_base_AlbedoTransparency.png",
+        "sha256": ""
+      }
+    ]
+  },
+  "output": {
+    "image": [
+      {
+        "path": "GPmRdPvtiFE/mallet_base_AlbedoTransparency.png",
+        "sha256": ""
+      }
+    ]
+  },
+  "options": [
+    
+  ]
+}

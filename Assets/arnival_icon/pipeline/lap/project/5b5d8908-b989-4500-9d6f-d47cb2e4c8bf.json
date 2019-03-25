@@ -1,0 +1,23 @@
+{
+  "id": "5b5d8908-b989-4500-9d6f-d47cb2e4c8bf",
+  "processor": "lap/types/processor/texture_from_png",
+  "input": {
+    "image": [
+      {
+        "path": "icon/Portal/InsidePortal_SkySphere_us.png",
+        "sha256": ""
+      }
+    ]
+  },
+  "output": {
+    "image": [
+      {
+        "path": "7StHwMcKjuA/InsidePortal_SkySphere_us.png",
+        "sha256": ""
+      }
+    ]
+  },
+  "options": [
+    
+  ]
+}

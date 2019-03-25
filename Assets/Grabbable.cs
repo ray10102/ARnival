@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using MagicLeap;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.XR.MagicLeap;
 
 public class Grabbable : MonoBehaviour
@@ -15,15 +16,21 @@ public class Grabbable : MonoBehaviour
 	public bool isBeingGrabbed;
 	private bool canBeGrabbed;
 
-	private Transform originalParent;
-	private Vector3 originalLocalPos;
+	public Transform originalParent;
+	public Vector3 originalLocalPos;
 
 	[SerializeField]
 	private MLInputControllerButton grabButton = MLInputControllerButton.Bumper;
 	[SerializeField]
 	private bool useTrigger;
 
-	void Awake()
+	[SerializeField] private Vector3 snapOrientation, snapPositionOffset;
+
+	[SerializeField] private AudioClip grabbedSound;
+
+	private AudioSource grabbbaleAudio;
+	
+	private void ConnectHandlers()
 	{
 		if (useTrigger)
 		{
@@ -34,10 +41,43 @@ public class Grabbable : MonoBehaviour
 		{
 			MLInput.OnControllerButtonDown += OnButtonDown;
 		}
-
+		
+	}
+	
+	private void DisconnectHandlers()
+	{
+		if (useTrigger)
+		{
+			MLInput.OnTriggerDown -= OnTriggerDown;
+			MLInput.OnTriggerUp -= OnTriggerUp;
+		}
+		else
+		{
+			MLInput.OnControllerButtonDown -= OnButtonDown;
+		}
+	}
+	
+	void Awake()
+	{
 		// cache original state values
 		originalLocalPos = transform.localPosition;
 		originalParent = transform.parent;
+		Debug.Log("cached");
+	}
+
+	void OnEnable()
+	{
+		ConnectHandlers();
+	}
+
+	void OnDisable()
+	{
+		DisconnectHandlers();
+	}
+
+	void Update()
+	{
+		
 	}
 	
 	void OnTriggerEnter(Collider col)
@@ -81,7 +121,7 @@ public class Grabbable : MonoBehaviour
 
 	void OnTriggerDown(byte controller_id, float value)
 	{
-		if (canBeGrabbed && !isBeingGrabbed)
+		if (canBeGrabbed && !isBeingGrabbed && useTrigger)
 		{
 			Grab();
 		}
@@ -89,7 +129,7 @@ public class Grabbable : MonoBehaviour
 	
 	void OnTriggerUp(byte controller_id, float value)
 	{
-		if (isBeingGrabbed)
+		if (isBeingGrabbed && useTrigger)
 		{
 			Release();
 		}
@@ -97,24 +137,38 @@ public class Grabbable : MonoBehaviour
 
 	private void Grab()
 	{
+		if (OnGrabbableGrabbed != null)
+		{
+			OnGrabbableGrabbed.Invoke();
+		}
+		
 		if (controllerVisualizer == null)
 		{
 			controllerVisualizer = FindObjectOfType<ControllerVisualizer>();
 		}
-		
+
+		isBeingGrabbed = true;
 		transform.parent = controllerVisualizer.transform;
-		OnGrabbableGrabbed.Invoke();
+		
+		transform.localPosition = Vector3.zero + snapPositionOffset;
+		transform.localRotation = Quaternion.Euler(snapOrientation);
 	}
 	
 	private void Release()
 	{
+		if (OnGrabbableReleased != null)
+		{
+			OnGrabbableReleased.Invoke();
+		}
 		transform.parent = originalParent;
-		OnGrabbableReleased.Invoke();
+		isBeingGrabbed = false;
 	}
 
 	public void Reset()
 	{
 		transform.parent = originalParent;
 		transform.localPosition = originalLocalPos;
+		transform.localRotation = Quaternion.identity;
+		isBeingGrabbed = false;
 	}
 }

@@ -1,0 +1,1 @@
+{"global": {"color": [1, 1, 1, 1], "blendmode": "Opaque", "name": "global"}, "materials": [{"albedo": "assets/model.png/_Nu2kxNF82w/model.png", "shaderName": "UnlitTextured", "blendmode": "Opaque", "name": "com_magicleap_sampleCube"}]}

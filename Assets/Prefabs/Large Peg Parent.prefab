@@ -38,6 +38,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4950739566348150}
   - component: {fileID: 54167514961298330}
+  - component: {fileID: 114844856329009304}
   m_Layer: 0
   m_Name: Large Peg Parent
   m_TagString: Untagged
@@ -65,8 +66,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1940089561897582}
   m_LocalRotation: {x: 0, y: 0.7071069, z: 0.70710677, w: 0}
-  m_LocalPosition: {x: -1.9821627, y: 0.7259076, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -2.5739005, y: -3.9319398, z: 0}
+  m_LocalScale: {x: 2.5, y: 2.5, z: 2.5}
   m_Children:
   - {fileID: 4410705267234370}
   m_Father: {fileID: 0}
@@ -142,4 +143,23 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 14
   m_SkinWidth: 0.01
-  m_Mesh: {fileID: 4300000, guid: 1a2d9606b8518d640b33afec9467a4f0, type: 3}
+  m_Mesh: {fileID: 4300000, guid: 336b7cf1a56aba747983ee034beb8de3, type: 3}
+--- !u!114 &114844856329009304
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1940089561897582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 837b5b432fd68f34c8afda3154fbc086, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isSpawned: 0
+  grey: {fileID: 2100000, guid: 3f0a9e80b33eb4244a85f8d6a7c18bf3, type: 2}
+  red: {fileID: 2100000, guid: 87ff07475b347fe4ab69069638dd8a04, type: 2}
+  green: {fileID: 2100000, guid: 882fb9bd85481394992722af5871aa30, type: 2}
+  greenStartProbability: 0.3
+  greenEndProbability: 0.8
+  stayAliveTime: 5
+  pegType: 0

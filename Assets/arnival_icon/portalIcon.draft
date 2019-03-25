@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="ASCII"?>
+<design:rootNode xmlns:design="http://www.magicleap.com/uidesigner/rcp/document/design" name="root" nodeTypeId="lumin.root" modelId="lumin" version="1.11.1">
+  <property id="name" value="root"/>
+  <property id="sceneName" value="portalIcon"/>
+  <node name="PortalIcon" nodeTypeId="lumin.ui.portalIcon">
+    <property id="exportSettings">
+      <property id="type" value="unity"/>
+      <property id="destPath" value="C:\Users\Sam\arnival_icon\out\icon"/>
+    </property>
+    <property id="gravityWellProperties">
+      <property id="boundaryShape">
+        <property id="size"/>
+        <property id="offset"/>
+      </property>
+    </property>
+    <property id="hoverPosition">
+      <property id="z" value="0.03"/>
+    </property>
+    <property id="iconSize" value="ExtraLarge"/>
+    <property id="name" value="PortalIcon"/>
+    <property id="position"/>
+    <property id="rotation"/>
+    <property id="scale"/>
+    <node name="model" nodeTypeId="lumin.ui.iconModelRoot">
+      <property id="materialAndModel">
+        <property id="material" value="5207c558-ebc0-40ac-ba11-28ab063e04e1"/>
+        <property id="model" value="78f58f57-9a4a-4e2a-87aa-b0c2752e9073"/>
+      </property>
+      <property id="name" value="model"/>
+      <property id="position"/>
+      <property id="rotation"/>
+      <property id="scale">
+        <property id="x" value="0.01"/>
+        <property id="y" value="0.01"/>
+        <property id="z" value="0.01"/>
+      </property>
+      <property id="textures">
+        <property id="0">
+          <property id="name" value="lambert4"/>
+          <property id="textureType" value="albedo"/>
+          <property id="materialTexture" value="24ab2af9-3e3d-4096-bccd-70cc9dfab49a"/>
+        </property>
+        <property id="1">
+          <property id="name" value="lambert4"/>
+          <property id="textureType" value="albedo"/>
+          <property id="materialTexture" value="300acbbf-27dc-422f-b4d4-d92cea119f29"/>
+        </property>
+        <property id="2">
+          <property id="name" value="lambert4"/>
+          <property id="textureType" value="albedo"/>
+          <property id="materialTexture" value="1d2933df-271c-4a8e-9220-c087baac349a"/>
+        </property>
+      </property>
+    </node>
+    <node name="iconBackgroundModel" nodeTypeId="lumin.ui.iconBackgroundModel">
+      <property id="name" value="iconBackgroundModel"/>
+      <property id="position"/>
+      <property id="rotation"/>
+      <property id="scale"/>
+      <node name="portalmodel0" nodeTypeId="lumin.portalModel">
+        <property id="materialAndModel">
+          <property id="material" value="95a0be64-a4c9-4fd5-9c62-a76aa0f182b1"/>
+          <property id="model" value="841deca3-4f6f-4b6d-be22-cc08ad6d4026"/>
+        </property>
+        <property id="name" value="portalmodel0"/>
+        <property id="position"/>
+        <property id="rotation"/>
+        <property id="scale">
+          <property id="x" value="0.01"/>
+          <property id="y" value="0.01"/>
+          <property id="z" value="0.01"/>
+        </property>
+        <property id="textures">
+          <property id="0">
+            <property id="name" value="com_magicleap_iconcreation_InsidePortal_SkySphere_Mat"/>
+            <property id="textureType" value="albedo"/>
+            <property id="materialTexture" value="ac119a0b-4640-478d-bad0-076b2876c3bf"/>
+          </property>
+        </property>
+      </node>
+    </node>
+  </node>
+</design:rootNode>

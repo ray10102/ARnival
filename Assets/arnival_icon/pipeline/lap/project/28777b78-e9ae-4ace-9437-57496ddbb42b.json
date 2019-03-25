@@ -1,0 +1,23 @@
+{
+  "id": "28777b78-e9ae-4ace-9437-57496ddbb42b",
+  "processor": "lap/types/processor/model_from_fbx",
+  "input": {
+    "model": [
+      {
+        "path": "icon/Portal/InsidePortal_SkySphere.fbx",
+        "sha256": ""
+      }
+    ]
+  },
+  "output": {
+    "model": [
+      {
+        "path": "qWODSB2cEY8/InsidePortal_SkySphere.fbx",
+        "sha256": ""
+      }
+    ]
+  },
+  "options": [
+    
+  ]
+}

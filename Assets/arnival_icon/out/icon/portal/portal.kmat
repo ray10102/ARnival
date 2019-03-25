@@ -1,0 +1,26 @@
+{
+  "global": {
+    "name": "global",
+    "color": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "blendmode": "Opaque"
+  },
+  "materials": [
+    {
+      "shaderName": "UnlitTextured",
+      "name": "com_magicleap_iconsample_skysphere",
+      "color": [
+        0.800000011920929,
+        1,
+        1,
+        1
+      ],
+      "blendmode": "Opaque",
+      "albedo": "Icon/Portal/portal.png"
+    }
+  ]
+}

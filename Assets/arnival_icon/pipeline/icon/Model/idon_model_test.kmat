@@ -1,0 +1,22 @@
+{
+  "global": {
+    "name": "global"
+  },
+  "materials": [
+    {
+      "shaderName": "UnlitTextured",
+      "name": "lambert1",
+      "albedo": "assets/ball_toss_lambert1_AlbedoTransparency.png/OmiDkB_zsIw/ball_toss_lambert1_AlbedoTransparency.png"
+    },
+    {
+      "shaderName": "UnlitTextured",
+      "name": "lambert2",
+      "albedo": "assets/blaster_v2_AlbedoTransparency.png/DZ9m2csJSVE/blaster_v2_AlbedoTransparency.png"
+    },
+    {
+      "shaderName": "UnlitTextured",
+      "name": "lambert4",
+      "albedo": "assets/mallet_base_AlbedoTransparency.png/GPmRdPvtiFE/mallet_base_AlbedoTransparency.png"
+    }
+  ]
+}

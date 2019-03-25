@@ -38,6 +38,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4366064616567234}
   - component: {fileID: 54605648287264532}
+  - component: {fileID: 114025190455265002}
   m_Layer: 0
   m_Name: Medium Peg Parent
   m_TagString: Untagged
@@ -52,8 +53,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1949671866356982}
   m_LocalRotation: {x: 0, y: 0.7071069, z: 0.70710677, w: 0}
-  m_LocalPosition: {x: 0.59779596, y: 0.2807791, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 2.6063738, y: 2.1054292, z: 0}
+  m_LocalScale: {x: 2.5, y: 2.5, z: 2.5}
   m_Children:
   - {fileID: 4677391676557512}
   m_Father: {fileID: 0}
@@ -67,7 +68,7 @@ Transform:
   m_GameObject: {fileID: 1592341222857666}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.39370078, y: 0.39370078, z: 0.39370078}
+  m_LocalScale: {x: 1, y: 1.214325, z: 1}
   m_Children: []
   m_Father: {fileID: 4366064616567234}
   m_RootOrder: 0
@@ -113,7 +114,7 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1592341222857666}
-  m_Mesh: {fileID: 4300000, guid: 336234f1d90a3de4eb95da3657f3d2ab, type: 3}
+  m_Mesh: {fileID: 4300000, guid: bdeb62cc705952b41896a807b8436524, type: 3}
 --- !u!54 &54605648287264532
 Rigidbody:
   m_ObjectHideFlags: 1
@@ -142,4 +143,23 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 14
   m_SkinWidth: 0.01
-  m_Mesh: {fileID: 4300000, guid: 336234f1d90a3de4eb95da3657f3d2ab, type: 3}
+  m_Mesh: {fileID: 4300000, guid: acc4f4fa47a654342bcb13e6266f2101, type: 3}
+--- !u!114 &114025190455265002
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1949671866356982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 837b5b432fd68f34c8afda3154fbc086, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isSpawned: 0
+  grey: {fileID: 2100000, guid: 3f0a9e80b33eb4244a85f8d6a7c18bf3, type: 2}
+  red: {fileID: 2100000, guid: 87ff07475b347fe4ab69069638dd8a04, type: 2}
+  green: {fileID: 2100000, guid: 882fb9bd85481394992722af5871aa30, type: 2}
+  greenStartProbability: 0.3
+  greenEndProbability: 0.8
+  stayAliveTime: 5
+  pegType: 0

@@ -1,0 +1,23 @@
+{
+  "id": "bfe1fc84-3b65-4a6a-81da-a7ab0a2421ca",
+  "processor": "lap/types/processor/files_array_builder",
+  "input": {
+    "file": [
+      {
+        "path": "icon/Portal/InsidePortal_SkySphere_test.kmat",
+        "sha256": ""
+      }
+    ]
+  },
+  "output": {
+    "files": [
+      {
+        "path": "p91aRwfpGCE/InsidePortal_SkySphere_test.kmat.files",
+        "sha256": ""
+      }
+    ]
+  },
+  "options": [
+    
+  ]
+}

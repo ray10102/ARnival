@@ -137,7 +137,7 @@ namespace MagicLeap
         {
             UpdateTriggerVisuals();
             UpdateTouchpadIndicator();
-            SetVisibility(_controllerConnectionHandler.IsControllerValid());
+            // SetVisibility(_controllerConnectionHandler.IsControllerValid());
         }
 
         /// <summary>

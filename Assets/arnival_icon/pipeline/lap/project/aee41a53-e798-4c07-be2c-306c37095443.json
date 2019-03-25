@@ -1,0 +1,23 @@
+{
+  "id": "aee41a53-e798-4c07-be2c-306c37095443",
+  "processor": "lap/types/processor/texture_from_png",
+  "input": {
+    "image": [
+      {
+        "path": "icon/Model/ball_toss_lambert1_AlbedoTransparency.png",
+        "sha256": ""
+      }
+    ]
+  },
+  "output": {
+    "image": [
+      {
+        "path": "OmiDkB_zsIw/ball_toss_lambert1_AlbedoTransparency.png",
+        "sha256": ""
+      }
+    ]
+  },
+  "options": [
+    
+  ]
+}

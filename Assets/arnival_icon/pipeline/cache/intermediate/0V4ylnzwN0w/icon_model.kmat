@@ -1,0 +1,24 @@
+{
+	"global" : {},
+	"materials" : 
+	[
+		{
+			"albedo" : "icon/Model/ball_toss_lambert1_AlbedoTransparency.png",
+			"blendmode" : "opaque",
+			"name" : "lambert1",
+			"shaderName" : "UnlitTextured"
+		},
+		{
+			"albedo" : "icon/Model/blaster_v2_AlbedoTransparency.png",
+			"blendmode" : "opaque",
+			"name" : "lambert2",
+			"shaderName" : "UnlitTextured"
+		},
+		{
+			"albedo" : "icon/Model/mallet_base_AlbedoTransparency.png",
+			"blendmode" : "opaque",
+			"name" : "lambert4",
+			"shaderName" : "UnlitTextured"
+		}
+	]
+}

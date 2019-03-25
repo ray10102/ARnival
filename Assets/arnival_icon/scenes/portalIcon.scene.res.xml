@@ -1,0 +1,17 @@
+<ResourceModel version="1">
+    <Texture file="assets/model.png/_Nu2kxNF82w/model.png" name="assets/model.png/_Nu2kxNF82w/model.png"/>
+    <Texture file="assets/portal.png/HMqqprjtAAk/portal.png" name="assets/portal.png/HMqqprjtAAk/portal.png"/>
+    <Material file="assets/InsidePortal_SkySphere_test.kmat/HNifIu5oX0o/InsidePortal_SkySphere_test.kmat" name="assets/InsidePortal_SkySphere_test.kmat/HNifIu5oX0o/InsidePortal_SkySphere_test.kmat"/>
+    <Texture file="assets/blaster_v2_AlbedoTransparency.png/DZ9m2csJSVE/blaster_v2_AlbedoTransparency.png" name="assets/blaster_v2_AlbedoTransparency.png/DZ9m2csJSVE/blaster_v2_AlbedoTransparency.png"/>
+    <Model file="assets/model.fbx/XIquS0XJ2T0/model.fbx" name="assets/model.fbx/XIquS0XJ2T0/model.fbx"/>
+    <Model file="assets/portal.fbx/Fx4lkHNWq9c/portal.fbx" name="assets/portal.fbx/Fx4lkHNWq9c/portal.fbx"/>
+    <Model file="assets/icon_model.fbx/KM28bGbNeR0/icon_model.fbx" name="assets/icon_model.fbx/KM28bGbNeR0/icon_model.fbx"/>
+    <Model file="assets/InsidePortal_SkySphere.fbx/qWODSB2cEY8/InsidePortal_SkySphere.fbx" name="assets/InsidePortal_SkySphere.fbx/qWODSB2cEY8/InsidePortal_SkySphere.fbx"/>
+    <Material file="assets/icon_model.kmat/rbd0jYiTPQI/icon_model.kmat" name="assets/icon_model.kmat/rbd0jYiTPQI/icon_model.kmat"/>
+    <Material file="assets/model.kmat/uIJlYjmR7DE/model.kmat" name="assets/model.kmat/uIJlYjmR7DE/model.kmat"/>
+    <Texture file="assets/ball_toss_lambert1_AlbedoTransparency.png/OmiDkB_zsIw/ball_toss_lambert1_AlbedoTransparency.png" name="assets/ball_toss_lambert1_AlbedoTransparency.png/OmiDkB_zsIw/ball_toss_lambert1_AlbedoTransparency.png"/>
+    <Texture file="assets/mallet_base_AlbedoTransparency.png/GPmRdPvtiFE/mallet_base_AlbedoTransparency.png" name="assets/mallet_base_AlbedoTransparency.png/GPmRdPvtiFE/mallet_base_AlbedoTransparency.png"/>
+    <Material file="assets/portal.kmat/MtFBGcN8Jl0/portal.kmat" name="assets/portal.kmat/MtFBGcN8Jl0/portal.kmat"/>
+    <Texture file="assets/InsidePortal_SkySphere_us.png/7StHwMcKjuA/InsidePortal_SkySphere_us.png" name="assets/InsidePortal_SkySphere_us.png/7StHwMcKjuA/InsidePortal_SkySphere_us.png"/>
+    <Material file="assets/idon_model_test.kmat/4aXqGKEa1ps/idon_model_test.kmat" name="assets/idon_model_test.kmat/4aXqGKEa1ps/idon_model_test.kmat"/>
+</ResourceModel>

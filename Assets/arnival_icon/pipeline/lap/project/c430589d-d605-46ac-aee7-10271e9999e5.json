@@ -1,0 +1,23 @@
+{
+  "id": "c430589d-d605-46ac-aee7-10271e9999e5",
+  "processor": "lap/types/processor/texture_from_png",
+  "input": {
+    "image": [
+      {
+        "path": "portal_icon/model/model.png",
+        "sha256": ""
+      }
+    ]
+  },
+  "output": {
+    "image": [
+      {
+        "path": "_Nu2kxNF82w/model.png",
+        "sha256": ""
+      }
+    ]
+  },
+  "options": [
+    
+  ]
+}

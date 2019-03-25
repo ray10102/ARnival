@@ -8,8 +8,21 @@ public class Blaster : MonoBehaviour
 	[SerializeField] private GameObject bulletPrefab;
 	[SerializeField] private GameObject bulletsParent;
 	[SerializeField] private float fireRate = .3f;
+	[SerializeField] private AudioClip fireSound;
 
-	private Vector3 bulletFirePosition;
+	private AudioSource audioSource;
+	
+	private ControllerConnectionHandler controllerConnectionHandler;
+
+	private Vector3 bulletFirePosition
+	{
+		get { return bulletPrefab.transform.position; }
+	}
+	
+	private Quaternion bulletFireRotation
+	{
+		get { return bulletPrefab.transform.rotation; }
+	}
 
 	private Grabbable grabbable;
 
@@ -21,10 +34,10 @@ public class Blaster : MonoBehaviour
 		{
 			instance = this;
 		}
-		bulletFirePosition = bulletPrefab.transform.localPosition;
 		bulletPrefab.SetActive(false);
 
 		MLInput.OnTriggerDown += OnTriggerDown;
+		MLInput.OnTriggerUp += OnTriggerUp;
 	}
 
 	void Start()
@@ -36,11 +49,16 @@ public class Blaster : MonoBehaviour
 		}
 
 		grabbable.OnGrabbableReleased += HandleGrabbableReleased;
+
+		audioSource = GetComponent<AudioSource>();
 	}
 
-	public static void Reset()
+	void Update()
 	{
-		instance.grabbable.Reset();
+		if (Input.GetKeyDown(KeyCode.Space))
+		{
+			Fire();
+		}
 	}
 
 	private void OnTriggerDown(byte controller_id, float value)
@@ -77,16 +95,19 @@ public class Blaster : MonoBehaviour
 			if (!child.gameObject.activeSelf)
 			{
 				// Try to use inactivated bullets instead of instantiating new ones
-				child.gameObject.transform.localPosition = bulletFirePosition;
-				child.gameObject.transform.localRotation = Quaternion.identity;
+				child.gameObject.transform.position = bulletFirePosition;
+				child.gameObject.transform.rotation = bulletFireRotation;
 				child.gameObject.SetActive(true);
+				audioSource.PlayOneShot(fireSound);
 				return;
 			}
 		}
 
 		// Instantiate new bullets if necessary
+		audioSource.PlayOneShot(fireSound);
 		GameObject bullet = Instantiate(bulletPrefab, bulletsParent.transform);
-		bullet.transform.localPosition = bulletFirePosition;
-		bullet.transform.localRotation = Quaternion.identity;
+		bullet.SetActive(true);
+		bullet.transform.position = bulletFirePosition;
+		bullet.transform.rotation = bulletFireRotation;
 	}
 }

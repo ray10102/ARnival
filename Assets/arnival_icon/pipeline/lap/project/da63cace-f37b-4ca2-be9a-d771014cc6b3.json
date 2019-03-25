@@ -1,0 +1,23 @@
+{
+  "id": "da63cace-f37b-4ca2-be9a-d771014cc6b3",
+  "processor": "lap/types/processor/texture_from_png",
+  "input": {
+    "image": [
+      {
+        "path": "icon/Model/blaster_v2_AlbedoTransparency.png",
+        "sha256": ""
+      }
+    ]
+  },
+  "output": {
+    "image": [
+      {
+        "path": "DZ9m2csJSVE/blaster_v2_AlbedoTransparency.png",
+        "sha256": ""
+      }
+    ]
+  },
+  "options": [
+    
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "id": "4f923626-0b14-46b7-b54d-ab1173223ec2",
+  "processor": "lap/types/processor/material_from_partial_kmats",
+  "input": {
+    "files": [
+      {
+        "path": "w3k_Vun_VCc/idon_model_test.kmat.files",
+        "sha256": ""
+      }
+    ]
+  },
+  "output": {
+    "material": [
+      {
+        "path": "4aXqGKEa1ps/idon_model_test.kmat",
+        "sha256": ""
+      }
+    ]
+  },
+  "options": [
+    
+  ]
+}

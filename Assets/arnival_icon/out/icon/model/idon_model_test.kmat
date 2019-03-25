@@ -1,0 +1,22 @@
+{
+  "global": {
+    "name": "global"
+  },
+  "materials": [
+    {
+      "shaderName": "UnlitTextured",
+      "name": "lambert2",
+      "albedo": "Icon/Model/blaster_v2_AlbedoTransparency.png"
+    },
+    {
+      "shaderName": "UnlitTextured",
+      "name": "lambert1",
+      "albedo": "Icon/Model/ball_toss_lambert1_AlbedoTransparency.png"
+    },
+    {
+      "shaderName": "UnlitTextured",
+      "name": "lambert4",
+      "albedo": "Icon/Model/mallet_base_AlbedoTransparency.png"
+    }
+  ]
+}

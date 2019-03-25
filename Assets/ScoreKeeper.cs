@@ -1,14 +1,17 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class ScoreKeeper : MonoBehaviour
 {
-	public int score { get; private set; }
-	public Action<int> OnScoreUpdated;
+	public float score { get; private set; }
+	public TextMeshProUGUI scoreText;
 
 	public static ScoreKeeper instance;
+
+	public static bool isGameRunning;
 
 	void Awake()
 	{
@@ -25,12 +28,21 @@ public class ScoreKeeper : MonoBehaviour
 	public void Reset()
 	{
 		score = 0;
-		OnScoreUpdated.Invoke(score);
+		if (scoreText)
+		{
+			scoreText.text = "Score:\n0";
+		}
 	}
 
-	public void AddPoints(int points)
+	public void AddPoints(float points)
 	{
-		score += points;
-		OnScoreUpdated.Invoke(score);
+		if (isGameRunning)
+		{
+			score += points;
+			if (scoreText)
+			{
+				scoreText.text = "Score:\n" + score.ToString(score % 1 < 0.0001 ? "N0" : "N2");
+			}
+		}
 	}
 }

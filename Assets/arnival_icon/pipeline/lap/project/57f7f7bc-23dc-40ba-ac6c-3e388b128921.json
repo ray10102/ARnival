@@ -1,0 +1,23 @@
+{
+  "id": "57f7f7bc-23dc-40ba-ac6c-3e388b128921",
+  "processor": "lap/types/processor/files_array_builder",
+  "input": {
+    "file": [
+      {
+        "path": "icon/Model/idon_model_test.kmat",
+        "sha256": ""
+      }
+    ]
+  },
+  "output": {
+    "files": [
+      {
+        "path": "w3k_Vun_VCc/idon_model_test.kmat.files",
+        "sha256": ""
+      }
+    ]
+  },
+  "options": [
+    
+  ]
+}

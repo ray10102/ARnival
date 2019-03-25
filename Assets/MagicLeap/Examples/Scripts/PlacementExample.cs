@@ -30,6 +30,9 @@ namespace MagicLeap
         [SerializeField, Tooltip("The placement objects that are used in the scene.")]
         private GameObject[] _placementPrefabs;
 
+        [BitMask(typeof(MLWorldPlanesQueryFlags))]
+        public MLWorldPlanesQueryFlags QueryFlags;
+        
         private Placement _placement;
         private PlacementObject _placementObject;
         private int _placementIndex = 0;
@@ -108,16 +111,11 @@ namespace MagicLeap
         #region Private Methods
         private PlacementObject CreatePlacementObject(int index = 0)
         {
-            // Destroy previous preview instance
-            if (_placementObject != null)
-            {
-                Destroy(_placementObject.gameObject);
-            }
-
             // Create the next preview instance.
             if (_placementPrefabs != null && _placementPrefabs.Length > index)
             {
-                GameObject previewObject = Instantiate(_placementPrefabs[index]);
+                _placementPrefabs[index].SetActive(true);
+                GameObject previewObject = _placementPrefabs[index];
 
                 // Detect all children in the preview and set children to ignore raycast.
                 Collider[] colliders = previewObject.GetComponents<Collider>();
